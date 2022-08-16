@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: 910911502135.dkr.ecr.ap-northeast-2.amazonaws.com/demo-frontend-kyoungschoi
   newName: 910911502135.dkr.ecr.ap-northeast-2.amazonaws.com/demo-frontend-kyoungschoi
-  newTag: abcdefg
+  newTag: e7d7103b
 resources:
 - ../../base
 patchesStrategicMerge:
