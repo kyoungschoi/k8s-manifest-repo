@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-frontend-kyoungschoi
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend-fargate
+  template:
+    metadata:
+      labels:
+        app: frontend-fargate
+    spec:
+      containers:
+        - name: demo-frontend-kyoungschoi
+          image: 910911502135.dkr.ecr.ap-northeast-2.amazonaws.com/demo-frontend-kyoungschoi:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

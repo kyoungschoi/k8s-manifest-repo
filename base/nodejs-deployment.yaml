@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-nodejs-backend-kyoungschoi
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: demo-nodejs-backend-kyoungschoi
+  template:
+    metadata:
+      labels:
+        app: demo-nodejs-backend-kyoungschoi
+    spec:
+      containers:
+        - name: demo-nodejs-backend-kyoungschoi
+          image: public.ecr.aws/y7c9e1d2/joozero-repo:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
