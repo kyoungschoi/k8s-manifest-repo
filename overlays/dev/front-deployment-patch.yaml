@@ -8,8 +8,8 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: frontend-fargate-kyoungschoi
+      app: frontend-fargate
   template:
     metadata:
       labels:
-        app: frontend-fargate-kyoungschoi
+        app: frontend-fargate
